@@ -7,6 +7,7 @@ Leave the game in foreground and once a match is found, the program will accept 
 If you want to stop the program before a game has been found, press 'Stop searching lobby'.
 
 
+### Program layout
 <p align="center">
   <image src="assets/main_window.png" alt="Program layout"
   caption="Program layout">
