@@ -34,15 +34,15 @@ match_found_image = Image.open("./assets/accept_button.png")
 SEARCH_LOBBY = True
 
 def start_lobby():
-    global SEARCH_LOBBY, thread_task
+    global SEARCH_LOBBY, THREAD_TASK
     SEARCH_LOBBY = True
-    thread_task = threading.Thread(target=accept_lobby)
-    thread_task.start()
+    THREAD_TASK = threading.Thread(target=accept_lobby)
+    THREAD_TASK.start()
 
 def stop_lobby_search():
     global SEARCH_LOBBY
     SEARCH_LOBBY = False
-    thread_task.join()
+    THREAD_TASK.join()
 
 def accept_lobby():
     global SEARCH_LOBBY
