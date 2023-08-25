@@ -33,7 +33,7 @@ match_found_image = Image.open("./assets/accept_button.png")
 
 SEARCH_LOBBY = True
 
-def start_lobby():
+def start_lobby_search():
     global SEARCH_LOBBY, THREAD_TASK
     SEARCH_LOBBY = True
     THREAD_TASK = threading.Thread(target=accept_lobby)
@@ -42,7 +42,10 @@ def start_lobby():
 def stop_lobby_search():
     global SEARCH_LOBBY
     SEARCH_LOBBY = False
-    THREAD_TASK.join()
+    try:
+        THREAD_TASK.join()
+    except NameError:
+        pass
 
 def accept_lobby():
     global SEARCH_LOBBY
@@ -63,12 +66,12 @@ def accept_lobby():
 
 
 btn_initialize = tk.Button(root, text="Search for lobby",
-                           width=30, height=8,
-                           command=start_lobby)
+                           width=30, height=8, activebackground="green",
+                           command=start_lobby_search)
 btn_initialize.grid(column=0, row=0)
 
 btn_stop = tk.Button(root, text="Stop searching lobby",
-                           width=30, height=8,
+                           width=30, height=8, activebackground="green",
                            command=stop_lobby_search)
 btn_stop.grid(column=1, row=0)
 
