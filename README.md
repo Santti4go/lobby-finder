@@ -1,7 +1,11 @@
 ### About
 Python utility to automatically accepts League of Legends matches.
+Useful when you want to go for a glass of water while on queue :wink:
 
 https://github.com/Santti4go/lobby-finder/assets/95138114/c33da9dd-6de1-443e-93a8-85532fad7fc8
+
+### Installation
+If you just want to go ahead and use it, feel free to download the [`lobby_finder.exe`](dist/lobby_finder.exe) and jump right into [how to use it](#How-to-use-it). If you will like to inspect the code then go to [dependencies](#Dependencies) section first.
 
 ### Dependencies
 You need Python 3.x.x\
