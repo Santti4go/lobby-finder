@@ -1,7 +1,7 @@
 ### About
 Python utility to automatically accepts League of Legends matches.
 
-![demo](doc/lobby_finder_demo.mp4)
+https://github.com/Santti4go/lobby-finder/assets/95138114/c33da9dd-6de1-443e-93a8-85532fad7fc8
 
 ### Dependencies
 You need Python 3.x.x\
@@ -11,7 +11,7 @@ git clone https://github.com/Santti4go/lobby-finder.git
 pip install -r requirements.txt
 ```
 
-### How to
+### How to use it
 Just launch the program while League of Legends is looking for a game and press the 'Search for lobby' button. \
 Leave the game in foreground and once a match is found, the program will accept it.
 If you want to stop the program before a game has been found, press 'Stop searching lobby'.
