@@ -1,6 +1,8 @@
 ### About
 Python utility to automatically accepts League of Legends matches.
 
+![demo](doc/lobby_finder_demo.mp4)
+
 ### Dependencies
 You need Python 3.x.x\
 Then you need to download the repository and then update the dependencies
