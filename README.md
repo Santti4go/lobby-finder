@@ -7,6 +7,10 @@ https://github.com/Santti4go/lobby-finder/assets/95138114/c33da9dd-6de1-443e-93a
 ### Installation
 If you just want to go ahead and use it, feel free to download the [`lobby_finder.exe`](dist/lobby_finder.exe) and jump right into [how to use it](#How-to-use-it). If you will like to inspect the code then go to [dependencies](#Dependencies) section first.
 
+Languages supported:
+* English.
+* Spanish
+
 ### Dependencies
 You need Python 3.x.x\
 Then you need to download the repository and then update the dependencies
@@ -23,7 +27,7 @@ If you want to stop the program before a game has been found, press 'Stop search
 
 ### Program layout
 <p align="center">
-  <image src="assets/main_window.png" alt="Program layout"
+  <image src="doc/main_window.png" alt="Program layout"
   caption="Program layout">
 </p>
 

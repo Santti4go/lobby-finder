@@ -37,7 +37,10 @@ root.title("League of Legends - lobby finder")
 ico = Image.open(path.join(base_path, "lol_icon.ico"))
 photo = ImageTk.PhotoImage(ico)
 root.wm_iconphoto(False, photo)
-match_found_image = Image.open(path.join(base_path, "accept_button.png"))
+
+languages = ["spanish", "english"]
+buttons_images = [path.join(base_path, f"accept_button_{lng}.png") for lng in languages]
+match_found_images = [Image.open(image) for image in buttons_images]
 
 
 def start_lobby_search():
@@ -66,16 +69,17 @@ def accept_lobby():
     start_time = time.time()
 
     while SEARCH_LOBBY:
-        button_pos_aux = pyautogui.locateOnScreen(match_found_image, confidence=0.65)
-        if button_pos_aux:
-            button_pos = pyautogui.center(button_pos_aux) + Properties.BUTTON_OFFSET_PX
-            pyautogui.moveTo(button_pos)
-            pyautogui.click(button="left", clicks=1, interval=0.1)
-            print_log(f"Match founded! \t \
-                    Elapsed time: {time.time()-start_time}")
-            SEARCH_LOBBY = False
-        else:
-            time.sleep(1)
+        for match_found_image in match_found_images:
+            button_pos_aux = pyautogui.locateOnScreen(match_found_image, confidence=0.5)
+            if button_pos_aux:
+                button_pos = pyautogui.center(button_pos_aux) + Properties.BUTTON_OFFSET_PX
+                pyautogui.moveTo(button_pos)
+                pyautogui.click(button="left", clicks=1, interval=0.1)
+                print_log(f"Match founded! \t \
+                        Elapsed time: {time.time()-start_time}")
+                SEARCH_LOBBY = False
+                break
+        time.sleep(1)
 
 def on_closing():
     """Handle closing event."""
