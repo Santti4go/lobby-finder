@@ -85,12 +85,18 @@ def on_closing():
 btn_initialize = tk.Button(root, text="Search for lobby",
                            width=30, height=8, activebackground="green",
                            command=start_lobby_search)
-btn_initialize.grid(column=0, row=0)
+btn_initialize.grid(column=0, row=0, sticky="nsew")
 
 btn_stop = tk.Button(root, text="Stop searching lobby",
                            width=30, height=8, activebackground="green",
                            command=stop_lobby_search)
-btn_stop.grid(column=1, row=0)
+btn_stop.grid(column=1, row=0, sticky="nsew")
 
+# To make the buttons resize them self
+root.grid_columnconfigure([0,1], weight=1)
+root.grid_rowconfigure(0, weight=1)
+
+# Configure callback when closing the window
 root.protocol("WM_DELETE_WINDOW", on_closing)
+
 root.mainloop()
