@@ -1,5 +1,5 @@
 ### About
-Python utility to automatically accepts League of Legends matches.
+Python utility to automatically accept League of Legends matches.
 Useful when you want to go for a glass of water while on queue :wink:
 
 https://github.com/Santti4go/lobby-finder/assets/95138114/c33da9dd-6de1-443e-93a8-85532fad7fc8
