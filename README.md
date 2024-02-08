@@ -36,4 +36,6 @@ If you want to stop the program before a game has been found, press 'Stop search
 This is only necessary if you want to generate an `.exe` file.
 The easiest way to build the entire app into a single executable is using `pyinstaller`.
 
+```bash
 pyinstaller --add-data 'assets;assets' lobby_finder.py --onefile -y
+```
